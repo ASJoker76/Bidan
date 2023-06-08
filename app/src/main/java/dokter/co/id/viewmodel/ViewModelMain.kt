@@ -47,7 +47,7 @@ class ViewModelMain : ViewModel() {
                     val dokter = firebaseAuth.currentUser
                     Log.d("TAG", "Login berhasil. User ID: ${dokter?.uid}")
 
-                    database = FirebaseDatabase.getInstance().getReference("User")
+                    database = FirebaseDatabase.getInstance().getReference("Dokter")
 
                     val query: Query = database!!
                         .orderByChild("email")
